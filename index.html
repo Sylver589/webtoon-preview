@@ -57,6 +57,8 @@
 
     /* Optional: if you want videos to never exceed container width */
     video { display: block; }
+    
+    img, video {  -webkit-user-drag: none;  user-select: none;    }
 
   </style>
 </head>
@@ -76,9 +78,13 @@
       </video>
 
       <!-- Your tall transparent PNG (on top) -->
-      <img class="overlay" src="Image/Page_1_TrBg.png" alt="Page 1 overlay">
+      <img class="overlay" src="Image/Page_1_TrBg.png" alt="Page 1 overlay" draggable="false">
 
     </div>
   </div>
 </body>
+<script>
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+</script>
 </html>
+
